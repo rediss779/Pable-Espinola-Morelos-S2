@@ -1,0 +1,17 @@
+public class Department {
+    public String deptName;
+    public Professor Professor; 
+
+    public Department(String deptName, String profName) {
+        this.deptName = deptName;
+        this.Professor = new Professor(profName); 
+    }
+
+    public String identity(){
+        return "Department Class: I am the Department Class. I handle organizing courses and faculty";
+    }
+
+    public String showInfo() {
+        return "\n" + "Department: " + deptName + "\n" + identity() + "\n" + Professor.showInfo();
+    }
+}
