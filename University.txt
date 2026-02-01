@@ -1,0 +1,17 @@
+public class University {
+	public String uniName;
+	public Department Department; // Aggregation
+	
+	public University(String uniName, Department department) {
+		this.uniName = uniName;
+		this.Department = department; // passed in from outside
+	}
+	
+	public String identity(){
+		return "University Class: I am the University Class. I handle providing education and learning place for students.";
+	}
+	
+	public String showInfo() {
+		return "\n" + "University: " + uniName + "\n" + identity() + "\n" + Department.showInfo();
+	}
+}
