@@ -32,6 +32,23 @@
     }
 }
 
+ class University {
+    public String uniName;
+    public Department Department;  // Aggregation
+
+    public University(String uniName, Department department) {
+        this.uniName = uniName;
+        this.Department = department; // Passed in from outside
+    }
+
+    public String identity(){
+        return "University Class: I am the University Class. I handle providing education and learning place for students.";
+    }
+
+    public String showInfo() {
+        return "\n" + "University: " + uniName + "\n" + identity() + "\n" + Department.showInfo();
+    }
+}
 public class Main {
     public static void main(String[] args) {
         Department csDept = new Department("Information Technology", "Sir Patrick");
