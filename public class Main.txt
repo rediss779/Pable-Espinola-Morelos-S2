@@ -1,3 +1,37 @@
+ class Professor {
+    public String name;
+
+    public Professor(String name) {
+        this.name = name;
+    }
+
+    public String identity(){
+        return "Professor Class: I am the Professor Class. I handle teaching and guiding students.";
+    }
+
+    public String showInfo() {
+        return "\n" + "Professor: " + name + "\n" + identity();
+    }
+}
+
+ class Department {
+    public String deptName;
+    public Professor Professor; 
+
+    public Department(String deptName, String profName) {
+        this.deptName = deptName;
+        this.Professor = new Professor(profName); 
+    }
+
+    public String identity(){
+        return "Department Class: I am the Department Class. I handle organizing courses and faculty";
+    }
+
+    public String showInfo() {
+        return "\n" + "Department: " + deptName + "\n" + identity() + "\n" + Professor.showInfo();
+    }
+}
+
 public class Main {
     public static void main(String[] args) {
         Department csDept = new Department("Information Technology", "Sir Patrick");
