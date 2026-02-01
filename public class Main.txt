@@ -1,0 +1,10 @@
+public class Main {
+    public static void main(String[] args) {
+        Department csDept = new Department("Information Technology", "Sir Patrick");
+        University uni = new University("Pamantasan ng Lungsod ng Valenzuela", csDept);
+
+
+        System.out.println(uni.showInfo());
+
+    }
+}
